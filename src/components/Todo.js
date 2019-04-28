@@ -66,7 +66,7 @@ class App extends Component {
               <button onClick={this.addTodo}>add</button>
               </div>
 
-              <ol className="theList">
+              <ol className="theList col-s-11">
 
                   {this.state.todos.map( (todo, index) => (
                       <div key={index}>
