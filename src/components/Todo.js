@@ -51,11 +51,11 @@ class App extends Component {
     render() {
         return (
             <div className="todoList">
-             <div className="header">
+             <div className="header ">
 
               <h1>{this.numofList()} Todos </h1>
 
-              <input 
+              <input
               placeholder="Enter note"
               value={this.state.todo}
               onChange={this.onChange}
@@ -66,7 +66,7 @@ class App extends Component {
               <button onClick={this.addTodo}>add</button>
               </div>
 
-              <ol className="theList col-s-11">
+              <ol className="theList col-s-11 col-12">
 
                   {this.state.todos.map( (todo, index) => (
                       <div key={index}>
