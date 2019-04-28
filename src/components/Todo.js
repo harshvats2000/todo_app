@@ -8,13 +8,19 @@ class App extends Component {
     }
 
     addTodo = () => {
-        const newTodo = this.state.todos;
-        newTodo.push(this.state.todo);
+        if(this.state.todo === "")
+        {
+            alert("Please enter something.")
+        }
+
+        else
+        {
+        this.state.todos.push(this.state.todo);
 
         this.setState({
-            todos: newTodo,
             todo: ""
         });
+        }
     }
 
     onChange = (e) => {
@@ -33,9 +39,13 @@ class App extends Component {
 
     checkKey = (e) => {
         var code = e.keyCode || e.which;
-        if(code == 13) {
+        if(code === 13) {
             this.addTodo();
         }
+    }
+
+    numofList = () => {
+        return (<span>{ this.state.todos.length }</span>)
     }
 
     render() {
@@ -43,7 +53,7 @@ class App extends Component {
             <div className="todoList">
              <div className="header">
 
-              <h1>Todo List</h1>
+              <h1>{this.numofList()} Todos </h1>
 
               <input 
               placeholder="Enter note"
@@ -61,7 +71,7 @@ class App extends Component {
                   {this.state.todos.map( (todo, index) => (
                       <div key={index}>
 
-                          <li onClick={e => this.delet(index)}>{ todo }</li>
+                          <li title="click to delete" onClick={e => this.delet(index)}>{ todo }</li>
 
                       </div>
                   ))}

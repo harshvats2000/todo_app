@@ -18,15 +18,15 @@ body {
 .todoList .header input {
   margin: 0px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   border: 2px solid #FFF;
-  width: 200px;
+  width: 300px;
 }
 
 .todoList .header button {
   border-radius: 8px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px;
   background-color: #0066FF;
   color: #FFF;
@@ -41,7 +41,7 @@ body {
 
 .todoList .theList {
   padding-left: 0;
-  width: 250px;
+  width: 390px;
 } 
 
 .todoList .theList li {
@@ -51,10 +51,11 @@ body {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+  font-size: 20px;
 }
 
 .todoList .theList li:hover {
   cursor: pointer;
-  box-shadow: 2px 2px ;
+  box-shadow: 4px 4px grey ;
   transition: all .5s ease;
 }
